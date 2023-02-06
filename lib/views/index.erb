@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>The Gossip Project</title>
+    </head>
+    <body>
+        <h1>Mon super site gossip, depuis le dossier views</h1>
+
+        <!-- Souhaiter la bienvenu aux visiteurs -->
+        <h2>Bienvenue très cher! Voici la liste des Gossips arrive.</h2>
+
+        <!-- Afficher la liste des Gossip -->
+        <% gossips.each do |gossip| %>
+            <p>
+                <%= gossip.author %><br/>
+                <%= gossip.content %>
+            </p>
+        <% end %>
+        <!-- Lien pour créer un gossip (format : "gossips/new/") -->
+        <a href="/gossips/new/">Ajouter un Gossip</a>
+    </body>
+</html>
